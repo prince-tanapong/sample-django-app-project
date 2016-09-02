@@ -1,0 +1,1 @@
+# sample-django-app-project
