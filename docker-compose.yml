@@ -1,13 +1,16 @@
 version: '2'
 services:
-  db:
+  postgres:
     image: postgres
   web:
-    build: .
-    command: bash -c "sleep 5 && python manage.py migrate && python manage.py runserver 0:8000"
+    build:
+        context: .
+        dockerfile: ./compose/django/Dockerfile
+    entrypoint: /entrypoint.sh
+    command: /start-dev.sh
     volumes:
       - .:/app
     ports:
       - "8000:8000"
     depends_on:
-      - db
+      - postgres
