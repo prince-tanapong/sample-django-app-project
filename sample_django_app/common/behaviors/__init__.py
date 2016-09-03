@@ -5,6 +5,7 @@ from .locatable import Locatable
 from .permalinkable import Permalinkable
 from .timestampable import Timestampable
 
+
 __all__ = [
     'Annotable',
     'Authorable',

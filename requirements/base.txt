@@ -4,4 +4,5 @@ django==1.9.9
 # Python-PostgreSQL Database Adapter
 psycopg2==2.6.2
 
-ipython
+ipython==5.1.0
+requests==2.11.1
