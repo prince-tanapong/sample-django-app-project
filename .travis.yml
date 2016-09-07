@@ -9,7 +9,7 @@ env:
   DOCKER_COMPOSE_VERSION: 2
 
 before_script:
-  -docker-compose build
+  -docker-compose up
 
 script:
   - docker-compose run web python manage.py test
