@@ -12,7 +12,7 @@ before_script:
   -docker-compose build
 
 script:
-  - docker-compose run python manage.py test
+  - docker-compose run web python manage.py test
 
 after_script:
   - docker-compose down
