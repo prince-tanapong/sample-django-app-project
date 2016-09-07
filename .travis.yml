@@ -8,9 +8,6 @@ services:
 env:
   DOCKER_COMPOSE_VERSION: 2
 
-before_script:
-  - docker-compose up -d
-
 script:
   - docker-compose run web python manage.py test
 
