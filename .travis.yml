@@ -1,0 +1,18 @@
+sudo: required
+
+language: python
+
+services:
+  - docker
+
+env:
+  DOCKER_COMPOSE_VERSION: 2
+
+before_script:
+  -docker-compose build
+
+script:
+  - docker-compose run python manage.py test
+
+after_script:
+  - docker-compose down
