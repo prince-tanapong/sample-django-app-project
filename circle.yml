@@ -8,6 +8,6 @@ dependencies:
 
 test:
   override:
-    - docker-compose run web python manage.py test
+    - sudo docker-compose run web python manage.py test
   post:
-    - docker-compose down
+    - sudo docker-compose down
