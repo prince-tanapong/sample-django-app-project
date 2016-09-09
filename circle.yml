@@ -8,6 +8,6 @@ dependencies:
 
 test:
   pre:
-    - docker run --name postgres postgres
+    - docker run --name postgres postgres -d
   override:
     - docker run --name web --link postgres:postgres --entrypoint /entrypoint.sh prince/sample-django-app-project python manage.py test
