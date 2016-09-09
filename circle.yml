@@ -4,6 +4,8 @@ machine:
 
 test:
   pre:
-    - docker build -t careebolt/careebolt -f ./compose/django/Dockerfile .
+    - docker-compose -f docker-compose.test.yml up -d
   override:
-    - docker run  -t careebolt/careebolt python manage.py test
+    - docker-compose run web python manage.py test
+  post:
+    - docker-compose down

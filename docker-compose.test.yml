@@ -1,0 +1,12 @@
+postgres:
+  image: postgres
+web:
+  build: ./compose/django/Dockerfile
+  entrypoint: /entrypoint.sh
+  command: /start-dev.sh
+  volumes:
+    - .:/app
+  ports:
+    - "8000:8000"
+  links:
+    - postgres
