@@ -4,6 +4,6 @@ machine:
 
 test:
   override:
-    - docker-compose run web python manage.py test
+    - docker-compose --version
   post:
     - docker-compose down
