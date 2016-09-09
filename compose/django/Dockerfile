@@ -17,4 +17,5 @@ RUN chmod +x /start-dev.sh
 ENV APPLICATION_ROOT /app
 RUN mkdir -p $APPLICATION_ROOT
 
+ADD . $APPLICATION_ROOT
 WORKDIR $APPLICATION_ROOT/sample_django_app
